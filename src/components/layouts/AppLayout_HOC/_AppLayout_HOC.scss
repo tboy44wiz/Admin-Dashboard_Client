@@ -1,0 +1,12 @@
+@use "src/assets/css/GlobalStyle" as global;
+@use "src/assets/css/AppTheme" as theme;
+
+.AppLayoutHOC {
+  height: global.$fullHeight;
+  width: global.$fullWidth;
+
+
+  .AppBody {
+    padding: 0 20px;
+  };
+}

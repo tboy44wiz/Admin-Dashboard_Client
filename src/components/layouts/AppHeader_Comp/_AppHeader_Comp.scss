@@ -1,0 +1,86 @@
+@use "src/assets/css/GlobalStyle" as global;
+
+.AppHeaderComp {
+  height: 60px;
+  width: global.$fullWidth;
+  background-color: #f5f5f5;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .brand__wrapper {
+    font-family: 'Barlow Condensed', sans-serif;
+
+    display: flex;
+    align-items: center;
+
+    .menu__icon {
+      margin-right: 5px;
+    };
+  };
+
+  .notification-and-profile__wrapper {
+    color: #515151;
+    display: flex;
+    align-items: center;
+
+    .notification-badge__wrapper {
+      position: relative;
+
+      .notification__badge {
+        height: 13px;
+        width: 13px;
+        border-radius: 7px;
+        background-color: red;
+        color: #ffffff;
+        font-size: 0.6rem;
+        font-weight: bold;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+      };
+    };
+
+    .profile-avatar-and-name__wrapper {
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+    };
+  };
+};
+
+
+
+
+
+
+
+// XX-Large devices (larger desktops, 1400px and up "xxl")
+@media (max-width: 1400px) { }
+
+// X-Large devices (large desktops, 1200px and up "xl")
+@media (max-width: 1200px) { }
+
+// Large devices (desktops, 992px and up "lg")
+@media (max-width: 992px) { };
+
+// Medium devices (tablets, 768px and up "md")
+@media (max-width: 768px) { };
+
+// Small devices (landscape phones, 576px and up "sm")
+@media (max-width: 576px) {
+  .AppHeaderComp {
+    .brand__wrapper {
+      .brand__text {
+        font-size: global.$smallFont;
+      };
+    };
+  };
+};

@@ -1,0 +1,105 @@
+@use "src/assets/css/GlobalStyle" as global;
+
+.MenuOverlayComp {
+  height: global.$fullHeight;
+  width: 280px;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 1000;
+  transition: left 0.7s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  inset: 0;
+
+  .sidebar-top__wrapper {
+    height: 60px;
+    width: global.$fullWidth;
+    color: #d0d0d0;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .close__icon {
+      height: 35px;
+      width: 45px;
+    };
+  };
+
+  .menu__items {
+    height: global.$fullHeight;
+    width: global.$fullWidth;
+    font-size: global.$fontSize;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    a {
+      color: #d0d0d0;
+      text-decoration: none;
+
+      .menu__item {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        .menu__icon {
+          height: 32px;
+          width: 32px;
+        };
+        .menu__name {
+          opacity: 1;
+        };
+      };
+    };
+  };
+};
+
+.Hide {
+  position: absolute;
+  left: -280px;
+
+  .close__icon {
+    height: 40px;
+    width: 60px;
+  };
+};
+
+
+
+
+
+
+
+
+// XX-Large devices (larger desktops, 1400px and up "xxl")
+@media (max-width: 1400px) { }
+
+// X-Large devices (large desktops, 1200px and up "xl")
+@media (max-width: 1200px) { }
+
+// Large devices (desktops, 992px and up "lg")
+@media (max-width: 992px) { };
+
+// Medium devices (tablets, 768px and up "md")
+@media (max-width: 768px) { };
+
+// Small devices (landscape phones, 576px and up "sm")
+@media (max-width: 576px) {
+  .MenuOverlayComp {
+    height: global.$deviceHeight;
+    width: global.$fullWidth;
+  };
+
+  .Hide {
+    position: absolute;
+    left: -100%;
+  };
+};
